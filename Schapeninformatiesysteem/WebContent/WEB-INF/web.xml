@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Schapeninformatiesysteem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  	<servlet>
+		<servlet-name>Homepage</servlet-name>
+	  	<servlet-class>controller.IndexServlet</servlet-class>
+	</servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>Homepage</servlet-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</servlet-mapping>	
+
+  	<servlet>
+		<servlet-name>OpdrachtergeverToevoegen</servlet-name>
+	  	<servlet-class>controller.EigenaarToevoegenServlet</servlet-class>
+	</servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>OpdrachtergeverToevoegen</servlet-name>
+		<url-pattern>/eigenaar-toevoegen.jsp</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>ToonSchapen</servlet-name>
+	  	<servlet-class>controller.ToonSchapenServlet</servlet-class>
+	</servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>ToonSchapen</servlet-name>
+		<url-pattern>/toon-schapen.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SchaapToevoegen</servlet-name>
+	  	<servlet-class>controller.SchaapToevoegenServlet</servlet-class>
+	</servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>SchaapToevoegen</servlet-name>
+		<url-pattern>/schaap-toevoegen.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SchaapVerwijderen</servlet-name>
+	  	<servlet-class>controller.SchaapVerwijderenServlet</servlet-class>
+	</servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>SchaapVerwijderen</servlet-name>
+		<url-pattern>/schaap-verwijderen.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SchaapUpdaten</servlet-name>
+	  	<servlet-class>controller.SchaapUpdatenServlet</servlet-class>
+	</servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>SchaapUpdaten</servlet-name>
+		<url-pattern>/schaap-updaten.jsp</url-pattern>
+	</servlet-mapping>
+</web-app>
